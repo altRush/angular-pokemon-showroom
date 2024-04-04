@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, TitleCasePipe } from '@angular/common';
 import pokemons from '../../pokemons.json';
 
 @Component({
   selector: 'app-pokemon',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, TitleCasePipe],
   templateUrl: './pokemon.component.html',
   styleUrl: './pokemon.component.css',
 })
