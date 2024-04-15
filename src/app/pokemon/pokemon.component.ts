@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { NgFor, TitleCasePipe } from '@angular/common';
-import pokemons from '../../pokemons.json';
 
 @Component({
   selector: 'app-pokemon',
@@ -10,5 +9,5 @@ import pokemons from '../../pokemons.json';
   styleUrl: './pokemon.component.css',
 })
 export class PokemonComponent {
-  pokemons = pokemons;
+  @Input() pokemon: any;
 }

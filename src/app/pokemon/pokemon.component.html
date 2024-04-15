@@ -1,5 +1,5 @@
-<div *ngFor="let pokemon of pokemons">
-  <div>{{ pokemon.name | titlecase }}</div>
+<div class="single-pokemon">
+  <div>{{ pokemon.name | titlecase }} (ID: {{ pokemon.id }})</div>
   <div><img src="{{ pokemon.sprites.front_default }}" alt="" /></div>
   <div>
     Types: [1] {{ pokemon.types[0].type.name | titlecase }}
