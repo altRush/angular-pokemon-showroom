@@ -1,5 +1,6 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgFor, TitleCasePipe } from '@angular/common';
+import { PokemonProfile } from '../core/models/pokemon-profile.interface';
 
 @Component({
   selector: 'app-pokemon',
@@ -9,5 +10,11 @@ import { NgFor, TitleCasePipe } from '@angular/common';
   styleUrl: './pokemon.component.css',
 })
 export class PokemonComponent {
-  @Input() pokemon: any;
+  @Input() pokemon: PokemonProfile = {
+    name: '',
+    id: '',
+    imageUrl: '',
+    type1: '',
+    type2: '',
+  };
 }

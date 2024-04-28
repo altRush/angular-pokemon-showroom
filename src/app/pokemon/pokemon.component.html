@@ -1,10 +1,8 @@
 <div class="single-pokemon">
   <div>{{ pokemon.name | titlecase }} (ID: {{ pokemon.id }})</div>
-  <div><img src="{{ pokemon.sprites.front_default }}" alt="" /></div>
+  <div><img src="{{ pokemon.imageUrl }}" alt="" /></div>
   <div>
-    Types: [1] {{ pokemon.types[0].type.name | titlecase }}
-    {{
-      pokemon.types[1] ? "[2] " + (pokemon.types[1].type.name | titlecase) : ""
-    }}
+    Types: [1] {{ pokemon.type1 | titlecase }}
+    {{ pokemon.type1 ? "[2] " + (pokemon.type2 | titlecase) : "" }}
   </div>
 </div>
